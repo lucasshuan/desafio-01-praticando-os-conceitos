@@ -2,11 +2,24 @@ import { Counter } from "../Counter/Counter";
 import { ITask, Task } from "../Task/Task";
 import { TaskInput } from "../TaskInput/TaskInput";
 import styles from "./TaskManager.module.css"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import clipboardIcon from "../../assets/clipboard-icon.svg"
 
 export function TaskManager() {
     const [tasks, setTasks] = useState<ITask[]>([]);
+
+    useEffect(() => {
+        const storedTasks = localStorage.getItem("tasks");
+        if (storedTasks) {
+            setTasks(JSON.parse(storedTasks));
+        }
+    }, [])
+
+    useEffect(() => {
+        if (tasks.length > 0) {
+            localStorage.setItem("tasks", JSON.stringify(tasks));
+        }
+    }, [tasks])
 
     function onCreateTask(newTask: ITask) {
         setTasks(state => [...state, newTask]);
@@ -23,7 +36,6 @@ export function TaskManager() {
             return task;
         })
         setTasks(updatedTasks);
-        console.log(updatedTask);
     }
 
     const completedTasks = tasks.filter(task => task.isComplete)

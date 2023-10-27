@@ -1,0 +1,12 @@
+.wrapper{
+    width: 100%;
+    height: 11rem;
+}
+
+.bg{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    height: 12.5rem;
+    background-color: var(--gray-700);
+}

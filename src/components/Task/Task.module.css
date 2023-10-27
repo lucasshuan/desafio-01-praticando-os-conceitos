@@ -1,0 +1,76 @@
+.wrapper{
+    width: 100%;
+    height: fit-content;
+    min-height: 3rem;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--gray-500);
+    box-shadow: 2px;
+    border: 1px solid var(--gray-400);
+    border-radius: 8px;
+}
+
+.toggle{
+    margin: 18px;
+    height: 18px;
+    width: 18px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+}
+
+.toggle:hover{
+    filter: brightness(1.1);
+}
+
+.toggleOff{
+    background-color: transparent;
+    border: 2px solid var(--blue);
+}
+
+.toggleOn{
+    background-color: var(--purple);
+    border: 2px solid transparent;
+}
+
+.toggleOn img{
+    height: 100%;
+}
+
+.title{
+    width: 100%;
+    margin: 5px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.titleComplete{
+    color: var(--gray-300);
+    text-decoration: line-through;
+}
+
+.deleteButton {
+    margin: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    width: 24px;
+    border-radius: 8px;
+    color: var(--gray-300);
+    background-color: transparent;
+    cursor: pointer;
+    border: 0;
+    transition: 0.2s;
+}
+
+.deleteButton:hover {
+    background-color: var(--gray-400);
+    color: var(--danger);
+}

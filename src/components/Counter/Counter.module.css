@@ -1,0 +1,16 @@
+.wrapper{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.counter{
+    color: var(--gray-200);
+    font-weight: bold;
+    font-size: 12px;
+    background-color: var(--gray-400);
+    padding: 3px;
+    padding-left: 8px;
+    margin-left: 10px;
+    padding-right: 8px;
+    border-radius: 10px;
+}

@@ -1,0 +1,46 @@
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    width: 46rem;
+    height: 3.375rem;
+    gap: 10px;
+}
+
+.input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    box-shadow: none;
+    font-size: 16px;
+    padding: 0;
+    padding-left: 1rem;
+    transition: 0.2s;
+}
+
+.input:focus{
+    border: 1px solid var(--purple)
+}
+
+.createButton{
+    transition: 0.2s;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+    background-color: var(--blue-dark);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 26px;
+    gap: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.createButton:hover{
+    background-color: var(--blue)
+}
